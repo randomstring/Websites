@@ -1,0 +1,255 @@
+#define merckx5_format 1
+#define merckx5_width 48
+#define merckx5_height 69
+#define merckx5_ncolors 177
+#define merckx5_chars_per_pixel 2
+static char * merckx5_colors[] = {
+"a0", "#a4a49d9d7777"
+"a1", "#cececacab5b5"
+"a2", "#babababaaaaa"
+"a3", "#9d9d9d9d9090"
+"a4", "#808080806e6e"
+"a5", "#777780806363"
+"a6", "#808080806363"
+"a7", "#888888886e6e"
+"a8", "#9d9d9d9d8080"
+"a9", "#909097978888"
+"b0", "#a4a4aaaa9797"
+"b1", "#afafafaf9d9d"
+"b2", "#afafb5b5a4a4"
+"b3", "#babac0c0afaf"
+"b4", "#b5b5babaaaaa"
+"b5", "#babab5b59d9d"
+"b6", "#cecec0c0aaaa"
+"b7", "#c5c5baba9d9d"
+"b8", "#979790906363"
+"b9", "#80806e6e3535"
+"c0", "#888877774848"
+"c1", "#888880805757"
+"c2", "#888880806363"
+"c3", "#979790906e6e"
+"c4", "#a4a497976363"
+"c5", "#babaaaaa6e6e"
+"c6", "#cacaafaf7777"
+"c7", "#d3d3baba8888"
+"c8", "#dcdcc0c09797"
+"c9", "#dcdcc5c59d9d"
+"d0", "#cacaafaf8888"
+"d1", "#afaf97975757"
+"d2", "#cacaaaaa6363"
+"d3", "#e0e0c5c59797"
+"d4", "#afafaaaa9090"
+"d5", "#e4e4e0e0cece"
+"d6", "#c5c5cacac0c0"
+"d7", "#afafb5b5aaaa"
+"d8", "#808088887777"
+"d9", "#888890908080"
+"e0", "#909090907777"
+"e1", "#97979d9d8888"
+"e2", "#aaaaafaf9d9d"
+"e3", "#babababaa4a4"
+"e4", "#808077775757"
+"e5", "#979797977777"
+"e6", "#a4a490905757"
+"e7", "#cecebaba8888"
+"e8", "#cecec0c09d9d"
+"e9", "#d3d3baba9090"
+"f0", "#f0f0ececdcdc"
+"f1", "#e4e4e4e4d7d7"
+"f2", "#b5b5babaafaf"
+"f3", "#97979d9d9090"
+"f4", "#979797978080"
+"f5", "#a4a4a4a49090"
+"f6", "#b5b5b5b5a4a4"
+"f7", "#c0c0c0c0afaf"
+"f8", "#b5b5afaf9797"
+"f9", "#a4a49d9d8080"
+"g0", "#888888886363"
+"g1", "#979790905757"
+"g2", "#babaaaaa8888"
+"g3", "#c0c0b5b58888"
+"g4", "#cecebaba9797"
+"g5", "#c5c5c0c0aaaa"
+"g6", "#e0e0dcdccaca"
+"g7", "#ecece8e8d7d7"
+"g8", "#d3d3d7d7cece"
+"g9", "#9797a4a49090"
+"h0", "#aaaaaaaa9797"
+"h1", "#aaaaaaaa9d9d"
+"h2", "#afafa4a48888"
+"h3", "#888888887777"
+"h4", "#afafa4a46e6e"
+"h5", "#6e6e63633535"
+"h6", "#77776e6e4848"
+"h7", "#cacacecec5c5"
+"h8", "#a4a4a4a48888"
+"h9", "#77776e6e5757"
+"i0", "#636363634848"
+"i1", "#777777775757"
+"i2", "#dcdcdcdccece"
+"i3", "#575763633535"
+"i4", "#6e6e6e6e4848"
+"i5", "#c5c5c5c5b5b5"
+"i6", "#cecececebaba"
+"i7", "#cecececec0c0"
+"i8", "#cacacacababa"
+"i9", "#a4a4aaaa9d9d"
+"j0", "#909090906e6e"
+"j1", "#63636e6e4848"
+"j2", "#aaaaafafa4a4"
+"j3", "#90909d9d9090"
+"j4", "#888897978888"
+"j5", "#808088886e6e"
+"j6", "#6e6e77775757"
+"j7", "#a4a4afafa4a4"
+"j8", "#9d9da4a49797"
+"j9", "#777788888080"
+"k0", "#777788887777"
+"k1", "#6e6e77776363"
+"k2", "#a4a4afaf9d9d"
+"k3", "#9797a4a49797"
+"k4", "#6e6e80807777"
+"k5", "#636377776363"
+"k6", "#63636e6e5757"
+"k7", "#636377775757"
+"k8", "#777780806e6e"
+"k9", "#6e6e6e6e5757"
+"l0", "#808088886363"
+"l1", "#9d9daaaa9d9d"
+"l2", "#777777776363"
+"l3", "#6e6e77776e6e"
+"l4", "#979780804848"
+"l5", "#63636e6e6363"
+"l6", "#afaf9d9d6e6e"
+"l7", "#c0c0afaf8888"
+"l8", "#afafa4a48080"
+"l9", "#dcdcb5b59d9d"
+"m0", "#e4e4caca9d9d"
+"m1", "#e8e8cecea4a4"
+"m2", "#e4e4cecea4a4"
+"m3", "#e8e8caca9d9d"
+"m4", "#f0f0d3d3aaaa"
+"m5", "#f4f4d7d7afaf"
+"m6", "#f4f4d7d7b5b5"
+"m7", "#e8e8d3d3b5b5"
+"m8", "#e0e0ceceafaf"
+"m9", "#cacababa9d9d"
+"n0", "#e0e0baba8888"
+"n1", "#e8e8caca9797"
+"n2", "#dcdccacaaaaa"
+"n3", "#f4f4cece9d9d"
+"n4", "#cacab5b58888"
+"n5", "#9d9d6e6e0000"
+"n6", "#f4f4d3d3a4a4"
+"n7", "#ececd3d3aaaa"
+"n8", "#c0c09d9d6e6e"
+"n9", "#d3d3c5c59d9d"
+"o0", "#baba97974848"
+"o1", "#e0e0c5c59090"
+"o2", "#b5b5afaf9090"
+"o3", "#ececd7d7b5b5"
+"o4", "#d3d3baba7777"
+"o5", "#e8e8caca9090"
+"o6", "#f8f8d7d7aaaa"
+"o7", "#cececacaaaaa"
+"o8", "#d3d3aaaa6363"
+"o9", "#cacac5c5aaaa"
+"p0", "#c5c5c0c0a4a4"
+"p1", "#f8f8dcdcafaf"
+"p2", "#f8f8dcdcb5b5"
+"p3", "#e0e0baba8080"
+"p4", "#e8e8dcdcbaba"
+"p5", "#e0e0d3d3baba"
+"p6", "#d7d7ceceb5b5"
+"p7", "#f4f4e4e4caca"
+"p8", "#f4f4cece9797"
+"p9", "#57576e6e5757"
+"q0", "#f8f8e8e8cece"
+"q1", "#f4f4e0e0c5c5"
+"q2", "#fcfce8e8cece"
+"q3", "#fcfcececd3d3"
+"q4", "#fcfcf0f0d7d7"
+"q5", "#e8e8e0e0c5c5"
+"q6", "#f4f4e0e0c0c0"
+"q7", "#f0f0dcdcbaba"
+"q8", "#f8f8f0f0e0e0"
+"q9", "#fcfcf4f4e0e0"
+"r0", "#e4e4d7d7baba"
+"r1", "#f4f4e8e8d3d3"
+"r2", "#ececdcdcbaba"
+"r3", "#dcdcd7d7baba"
+"r4", "#ecece4e4cece"
+"r5", "#f0f0ececd7d7"
+"r6", "#e0e0e0e0cece"
+} ;
+static char * merckx5_pixels[] = {
+"a0a1a1a2a3a4a5a4a5a6a7a8a9b0b1b2b3b4a2b5b5b6a1b7b8b9b9c0c1c2c2b8c3a0c4c5c6c7c8c9c8d0d1d1d1d2c7d3",
+"d4d5d5d6d7a9d8d9e0e0a9e1a9b0e2b1b2b2a2e3b5b7b7b5c2b9b9e4c1c2c1c2c3e5c4e6d1c6e7e8e8c5e6d1d1c6e9d3",
+"b7d5f0f1f2a9a9f3d9f4e2f4f4f5b1f6b1f6f7f8b5b5d4f9c3g0g0c2c1e4a7c2a8c2c3g1e6e6c5g2g3c4g1g1c4e6g2g4",
+"g5g6g7f1g8f2a3a9e1g9f5a8a8f5h0h0h1b1b1d4h2f9e5c3c2c2c2a7c2c2a8f4a3h3e5b8g1g1c4h4h4g0h5h6c0c0b8h4",
+"g5d5f0f1f1h7h0e0f4a8f4h8d4d4f5h0b1b1h0h0f9e5a7g0c2c2c2e4h9a6h3f4a8c2c2h5c0b8c3a0b8g0e4i0i1h6e4c1",
+"f7g6g7d5i2d6f6a8e0e5a8f5d4d4d4f8f6f6f6b1h0a8f4a7c2a6c2e4i1c2e0a8a3h3c2b9c1a0e5f9g0c1h5i3i1i4h5e4",
+"b1i5i6i7i8f7f6h0e1a8d4d4f5h0b1f6f6b4a2i9b0g9f4a7a5i1i1a6e4e0h3f4f4c2c2a7c1g0j0d4h8j0i0i3j1i4i4a6",
+"f4h1h1f6a2f6h0f5h8f5h0h0b0e2b2b2j2j2j2j3j3a9j4j5j6j6i1i1i1a7a6c2c2h9h9h6h5h6g0d4b1h8g0i0i0j1j1a4",
+"d9a3a3f5h0h0a8f4a8g9f5e2e2j2j2j2j7j8j3j9j9k0j5k1j6j6a5a6i1a7i1c2c2a6h9h6b9e4c3a8h8e5g0i1i0i4j1a5",
+"a9a3f4b0f5f5a3f4e0e1b0e2b2j2k2j7j2k3d8k0k4k5k6k6k7j6i1a5i4a6i4a6a6a6h6e4e4h6j0a8d4j0i1i1i0j1j1a5",
+"d9f3j8b0h0b1h0a8f4g9e2e2e2e2b0f3d9k8k9i0j1j6j6j1j1j6j6j6a5k9i1i1h9i1i0i0i4i1a6a7j0l0j6j1j1j6j6j5",
+"j3l1j2b0h1b1b1b0a3f5e2b1b0f3a9d9a4k1k6i1i4i4i1k9l2i1j1i0j6i4i1l2i1a6h9i4h9j6i1a5a5a5j6k7j1k7j6k8",
+"j3l1i9a3b0h1b2e2h1b0h1i9f4d8a4k8k1k9k9l2k9k9l2j6j6k9i0i3k9j1j6i1i1a6l2i1h9i4i4i4i1i1j6k9i0i0j6l2",
+"d9j4d9a9f4a3h1b2b2i9a3a9a4k1k1k1k9k1k8k9k9a6a6k9i0j1k9i0l2k9l2l2j6a4l2h9h9i4i4i4i1l2i1j6i0i3i4k9",
+"l3l3k8d8h3d9f3b0b0f4h3k8k9k6k9k1k9k1l2k9k9l2a4j1i3i0k9k9a4a5a4a4a5h3a4h9h9h9k9h9l2l2k9l2i4i0h9h9",
+"k6k6l3k8j5h3d9d9d9k8k9k6k6k6k9k9k9k9k9j6i0i4i1k9i4k9k9k9a6l2a4a4a4d9h3c2c2a6h9h9l2h9i0a4i1k9h9h9",
+"k1k1k8k1d8a9d9k8k1k6k6i0k6k9i0k9i1k9i0k9i0i0i1h9i4i1a6i4i1h9a6a7h3f4d9f4h3c2h9h9l2k9k9a4a5l2i1h9",
+"d8d8k8k1d9f3a9l3k6k6k1k6k9k6i0i4a6a6i0i0i0h6e4i4h5e4a7h6e4e4c2e5f4a3a8a8f4c2l2k9l2l2k1j5j5a4l2i1",
+"l2k1k8k8d8d9j9l3k6k6k9i0k9i0i4i4i4h6i0h5h6h6h6b9b9b9b9b9c1c3c3e5a8f9f9f9f9f4f4a7j6d8k1k1k1a5j6j1",
+"k9k9k1k8k8k1k1k1k1k6i0k9i0h9i0i0h6i0h5h5b9c1l4l4c0c0c0c0b8c4e6c3c3e5c3d4f9c3e0j0a7d8k7k5k5k7k6j1",
+"k1k1k8k1k1k1l5k6k6k9l2a4i0a6h5h5e4h5g0g1a0h2h2f9l6e6d1d1l6g2g2f9l6a0e6a0c3e5j0l0j0j5k1k1k7k7k7k6",
+"k8a4d8k1a5a5k9i0k6l2a4a6i4c2b9h6c0c0a0l7g4g4g4g4d0d0e9d0d0e7d0d0l7l6l6g1l4a0g0e4a7a5a5k1k5k7k7j1",
+"k8a4a4d9k8j6k6k1k8a4l2h6h9e4c1b9c0b8l8d0g4g4l9m0m0m0m1m0m1m1m2m2c8g4d0l7l6c4l4c1e5l0i1k1j6j6k6i3",
+"l2k8l2h3a4j6k9k9l2h9h9h6e4b9c1c0c0l6g2d0d0d0e9m0m1m3m3m4m4m5m5m6m6m7m7m8g4m9l8e6c3a7a7a6k1k1j6i3",
+"k8a4k8j6a5l2j6k9k9k9h9h9h9c1c1b8l6l8l7d0c7c7n0m3m3n1n1n1n1n1m1m4m5m6m6m6m7m8n2g2c3e5e5a7a6l2l2i0",
+"k8a4c2i1i4i0i4i1l2i4i0h9h5c0c0e6g3g2d0c7c7c7n0d3m3n1n3m3n1n1m3m1m4m5m5m5m7m2m7c8l6a0c2a7a6i1k9i0",
+"a4c3b9c0b9h6h6h9i4h6e4h6b9e6h4c5d0e7n4e7e9n0n0n0n0d3m3d3n1n1n1m3m1m4m4m4m1m1m1m0g4c5g1b8e4i1l2j6",
+"a4l4n5n5c0b9h5h5h6h6h5c0l4h4n4n4e7e8e7e9e9e9e9c8d3m0m1m3m3m3m3m3m1n6n6m1m3m1m1m3m0e7h4a0g0a6a5i1",
+"a4l4e6e6e6l4b9h6e4b9h5g1c4g3e8e9e9e9n4e9e9e9c7e9c8d3m0m1m1m1m3n1m3m1m1m1m3m3m1m1m2c9n4l8a7e4i1i1",
+"c2l4f9m9g2c4b8c1b9b9c0c4g2e7c8c7e7n4c6d0d0d0c6c6e7c8m0m1n7m4m1m3m3m3m1m3n1n1m3m0m2n2g4f9g0i1i1i4",
+"c2e6e7c8g4l7l6g1b9b9l4h4n4e8e9c7c7e7e7d0d0c5c5n8d2c7d3m1n7m4m1m3n1m3m3m3d3d3d3d3m0c9g4f9g0e4i1i4",
+"c2n8m0c9n2n2l7e6g1l4l4c5e9e9c7c7e9e9e9g4g4n4d0n8n8c5d2d3m0n7m1m3d3d3d3m3d3d3d3n0d3c9m9l8g0e4i1i4",
+"l4d0m1m2m8n2g3l6e6e6e6c6e9n0c7n0d3n0c8c9n9e8g4n4c5o0d1c6c7m0m3m3d3m3m3m3d3d3d3n0c8e8m9h2g0i4h9i4",
+"l4e9n7m7n2g4d0d1g1e6d1c6d3o1n0d3d3n0c8e7g4e8c9c9e9d2o0o0c6o1m0m0m3m1m1m1m0m0d3n0c8e8g3o2g0h5i4h9",
+"b8l9m1o3m2n4l6e6g1d1c6c7n0n0o1n1m3m3c8d0n4n4n4e7e7n4d2c5c6o4n0d3m3m1m1d3m0m0d3e9e8g4g2a0a7i1i4i4",
+"l4e7m1m2n2l7e6l4l4d1c6o4n0o1o5n1m1m1m1c8c8e7d0c6d0e7e7d2c6c7n0d3d3c8n0c7e9d3e9e7n4g3g2b8c2i1k9i4",
+"c0d0c9n2n9g2e6c0l4d1n4o4n0o5n1m3n6o6m5m2m2e9c6d2o4n0d3c7n0o1d3d3n0o4d2c5c6e7e7d0d0l7l8g0a6i1i4i0",
+"c1l7d3n2n9h2g1c0g1d1n4o4o1n1n3n3o6o6m4m1m1m0e9c7n0d3d3d3m0m0d3n0c7d2n8d1c4d1d1h4c5h4c4g0a6j6i0i0",
+"g0g2n2o7b7f9g1g1g1d1n4c7o1n1n3n6o6o6m1m4m5m1m1m0m3d3n0d3m3m3o1c7o8d2d2c5d1e6e6g1e6c4b8g0a6k9k6k1",
+"j0h4n2a1e3f9g0g0g1d1c6o4n0o5n1n3o6o6m1m4o6o6m1m3m3n1o1o1d3d3n0c7o4c7c7d0l7l7c5c4g1b8g0i1j6k9l3a4",
+"d4h4n9o9e3a8g0g0g1c4c6o4n0o5n1n3n6o6o6o6o6o6n3m3m3m3n1d3d3d3n0n0n0c8c9n4g3g3g3g2h4c3c1i4k9k1l3k8",
+"i5o2p0f8d4j0i1e4g1h4n4c7o1n1n1n1n6o6m5p1p2p1n6m3m3n1n0n1d3n0n0n0n0d3c9n4c5d1h4c5l8c4c1i1j6j6k9k9",
+"i8o9b1h0a8a7c1c0c4c5e7n0n0n1n1n6o6m4n7m6m6m5m4m1m3m3m3m1m3n0p3n0o1o1o1e7c5d1d1g2g2c4c0i1i1i1l2k9",
+"i5i5a2h1a3f9a0a0g2n4c7n0n0n1m3n6o6m4m4m5o3m1m1m0m0m0m3m3n1n0p3n0o1o1o1c7c6c5c5l7g2b8e4e4e4a6l2k9",
+"o9i5i5e3b5f8g2g3g3n4c7n0n0n1m3n6m4m5m4m1m1m0m0m0m0m0m0m3n0p3o4n0o1o5o1d3c7n4g3g3g2b8e4i1i1a6l2k9",
+"a1i5a1g5b5b5g2g3g3e7c7n0o1n1m3m1m4m4n7m0m0d3d3m0m0m0m0m0n0o4o4n0o5o5o5m3d3o1e8e8g2b8i1j6a5a4l2l2",
+"a1a1a1b7g2g2g2g3n4c7c7n0d3m3m3m1m4m4m7m1m0c8e9e9c8m0m2m0n0o4o4n0o5o5o5n1d3m0c9e8l8g0h5i1j5j5l2k9",
+"p4p5p6b7l7g2l7g3e7c7c7n0o1m3m3m1m4m5m5m5m1c8c7d0e7e9c9c8c7o4n0n0o5n1n1o5n1m0c9m9l8g0j6j6k1k1k1k9",
+"p7p7p5m9d0c5l7g3n4o4o4n0o1n1m3m3m1m1m7m1m1m0e9e7d0n4e7e7e7o4n0n1n1p8p8o5n1m0c9g3a0g0j6k6p9k6k1i1",
+"q0q1p5n4l7c5c5c6n4c7o1n0d3m3m3d3m3m2m2m1m1m1m0e9n4c6c6c5d2o4o1m3n1p8n3o1d3m0e8g2c3a6j6k5k5k5k8l2",
+"q2q1m8n4d1h4c5c5n4e7c7o1n1m3m3m3c8c8d3c8m1m1m1m2d3n4c5c5c5d2n0m3n1o5n1n1n0c7n4h4c1j6k1k1p9p9k1a6",
+"q3q1m8e8c5c5c5c5n4e7c7d3d3d3d3c8c7o4n0c8c8m0m0m2m0e9n4e7e7c7d3m3m3o5o5d3e9e7c5b8e4i4k1k1l5k6k1i1",
+"q3p7m8g4c5c5c5c5n4n4c7d3d3d3d3c8d0c6c7c8c8c8m2m2c9d3c8e7c7o1d3m3n1o1o1e9e7l7c4c0i1i1k1k1l3k1k9k9",
+"q4q0p5n4h4h4h4c5g3n4e9e9d3m0m1m0c7c6c7c8m2m7m7m0e9c7c8c7e9d3d3d3d3o1n0n4g3h4c0h6i1a6l2k1k8k8k6j1",
+"q4q0q5g4g2h4h4h4g3g3e7e9c8m0m1m1n0c7d3m1m6q6q7m1c8e7e7e9d3d3o1n0o1c7c7g2h2c3h6h5e4a6l2k1k8k8j6i4",
+"q4q4q5m9l8l8h4h4g3g3e7e9c8d3m0m0d3d3m2m6q7q6q6m6m1c7d2c6o4c7c7c7c7o4n4l8a8e4h5h5i1i1k9k9l2a5j6j6",
+"q8q4q5m9l8l8a0h4o2g2g3e7c8c8c8d3d3d3m0m1m7m6m6m6m7e9n8n8d2e7c7c7o4n4g3h8j0i1j6i1i1i1i1i4k9k9j6k1",
+"q9q4q5a1g2h2h4a0h4h4c5n4c8m0c8m0m3n0n0c8m2m1m1m1m1c7o0d2c6c7o1o1e7c5h4e5j5j6a5a6i1i1a4i4i4i0j1j6",
+"q4p7q5o7g2c4c4h4h4h4g2e8e8c9m0m3m3n1n0n0n0n0d3d3o1o4c6o4c7d3e9e8g3h4b8a6l2k9j1j6l2l2i1i4j6j6i4i4",
+"q4p7r0o7g3l8a0c4c4c4h4g3e7c8m0m1m1m3m3n0n0n0n0c7o4o4o4c7d3c9g4n4l8c4g0a7a4k1j6l2l2l2j6j1k9j1i0j1",
+"q4p7r0o7b7h4c4c4c4c4h4g2n4e8c9m2m1m4m4m1m0d3n0c7o4o4c7c7c8e8n4l8h4b8g0j5k8k1k9j6k1j6k9a5l2k9j1i0",
+"q4p7q5p5m9h4c4c4h4h4h4h4g3e8c9m2m1m1m5m7m7m1m2d3e9c7c7e7e9d0l7c4c3g0l0a6k1k9k9k9k9k9j6j5a5k9j1j1",
+"q0p7p7p5n2g3h4l6c4c4h4h4l7n4e8c9m2m1m7m1m2m2m2c9d3e7n4n4n4g2l8b8c3l0l0a4l2k9k9j6k9j6j6j6j1i0i0j1",
+"p7p7p4n2n2n2g3l8c4c4c4c4h4l7n4g4n2m2m2m2m2n2c9n9e7n4d0l7g2l6a0a7j0j5j5k8k1k9k1j6k6j1k9j6j1j1j1j1",
+"r1q1p4n2m2n2e8g3g2h4l6c4h4h4g2n4e8e8g4n2n2n2e8n4g3g3l7l7l8a0c3e0a7d8k0k1k9j6a5l2k6i0i0a5j6i4j1j1",
+"q0p7q1p5m8n2e8g4g3g2c4l6l6l6l8l7n4g3l7m9e8n9e8g3g3g3g3n9b7d4e5f4a4k0k1k6k6l2d8d8l2j1j1j6j1i0i0i3",
+"r1q1r2m8n2n2n2e8g3l8l6l8h4h4h4h4h4h4l7l7l7g3g3g2h4g3n9p0p5g6e3f4d8j9k0k8l2l2a4k8k9j1j1i0j6j6i4j1",
+"q0p7r2m7m2m2m2n2e8d0l8l8l6a0h4h4l6h4l8h4h4g2g2g2g3n9p6r3r4r5g6f7a3j9j9k8l2l2a5l2k9j1j1j1j1k9i4i4",
+"q3q0r2m7m2m2n2n2n2m9g2l8h4h4l8l8l8h4h4h4h4h4h4g3n9p6p4r1q4q8f0r6f6d8d8k8k8k8l2k1j6k9j1k9j1j1j6j6",
+} ;
