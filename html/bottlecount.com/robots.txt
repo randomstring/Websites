@@ -1,0 +1,22 @@
+# Please do not crawl faster than 1 hit per second. Thanks.
+#
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /Cellar/jamesn/
+Disallow: /harvey/morenews.cgi
+Disallow: /harvey/person.cgi
+
+User-agent: grub-client
+Disallow: /cgi-bin/
+Disallow: /Cellar/
+Disallow: /UPCDB/
+Disallow: /harvey/morenews.cgi
+
+User-agent: ZyBorg
+Disallow: /cgi-bin/
+Disallow: /Cellar/
+Disallow: /UPCDB/
+Disallow: /harvey/morenews.cgi
+
+
+

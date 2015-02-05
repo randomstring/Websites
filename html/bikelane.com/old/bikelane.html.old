@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>The WWW Bicycle Lane - a comprehensive online cycling resource.</TITLE>
+<!-- Changed by: Bryn Dole,  7-Jan-1998 -->
+
+<!-- Search words that will fool most search engines: 
+   bikes, bike, biking, bicylces, tandem bicycles, Velo, bicycle commuting,
+   mountain biking, track, bicycle racing, bike racing, recumbants, 
+   unicycles, environmentally friendly, Tour de France, Giro, Spring Classics,
+   bicycle racing results, USCF, NORBA, NCCA, UCI, bicylce lane, bike lane,
+   two wheels, cycling clubs, bicycle tours, bike tours, Triathlon, time trial
+   madison, sprint, down hill, cross contry, trials, index shifting, Champanolo
+   Shimano, Merckx,  Coppi, Mosser, Indurain, Lance Armstrong, Motorola  -->
+
+<!--There is none of the following:
+ deviant sex, pornography, nude breasts, bestiality, or other rude material.
+ -->
+
+<META NAME="author" CONTENT="Bryn Dole">
+<META NAME="description" CONTENT="The WWW Bicycle Lane, a comprehensive list of bicycling web sites and online resources.">
+<META HTTP-EQUIV="keywords" CONTENT="bikes, bike, biking, bicycles, velo, 
+commuting, mountain, racing, mtb, outdoors, 
+recumbents, tandem, tandems, unicycles, environmentally friendly, 
+Tour de France, Giro, spring classics, results, USCF, NORBA, NCCA, UCI, 
+lane, bikelane, two wheels, clubs, tours, tour,
+triathlon, time trial, madison, sprint, down hill, cross country, 
+components, track, campagnolo, shimano, coppi, merckx">
+<LINK REV=made HREF="mailto:bikelane@bikelane.com">
+<LINK REL=Home HREF="/">
+
+</HEAD>
+<FRAMESET rows="75,*" border="1" frameborder="0" framespacing="0">
+<FRAME SRC="bikelane-title.html">
+<FRAMESET cols="30%,70%" border="0" frameborder="0" framespacing="0">
+<FRAME SRC="bikelane-index.html">
+<FRAME NAME="display" SRC="bikelane-body.html">
+</FRAMESET>
+</FRAMESET>
+<BODY>
+<NOFRAMES>
+If you are reading this, your browser does not support the Netscape
+"frames" extension.  You cannot read this page.  You either need to
+download a copy of Netscape 2.x or greater, or you will have to access 
+the plain HTML version of these pages.
+<P>
+<A HREF="bikelane-body.html">Go to</A> the main body of the WWW bicycle Lane.
+</NOFRAMES>
+</BODY>
+</HTML>
+
+
+
+
