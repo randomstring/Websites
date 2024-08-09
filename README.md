@@ -3,7 +3,7 @@
 This repository holds the static HTML and web content for my websites. Some of it quite old and here primarily as an archive of webpages past.
 
 ## TODO
- - redirect www.foo.com domains onto foo.com domains
+ - redirect www.foo.com domains onto foo.com domains https://developers.cloudflare.com/pages/how-to/www-redirect/
  - bottlecount.com
 
 ## bryndole.com
